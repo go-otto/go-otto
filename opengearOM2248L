@@ -1,0 +1,35 @@
+#!/usr/bin/expect -f
+
+set timeout 10
+spawn config
+expect "config:"
+
+for {set i 1} {$i <= 48} {incr i} {
+    set padded_i [format "port%02d" $i]
+
+    # Enter the port context
+    send "port\r"
+    expect "config(port):"
+    send "$padded_i\r"
+    expect "config(port $padded_i):"
+
+    # Apply settings for this port
+    send "label \"Port-$i\"\r"
+    send "mode consoleServer\r"
+    send "pinout X2\r"
+    send "baudrate 115200\r"
+    send "databits 8\r"
+    send "parity none\r"
+    send "stopbits 1\r"
+    send "single_session true\r"
+    send "apply\r"
+    expect "config(port $padded_i):"
+
+    # Exit back to port context before next port
+    send "up\r"
+    expect "config(port):"
+}
+
+# Exit config shell
+send "exit\r"
+expect eof
