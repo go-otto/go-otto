@@ -1,0 +1,6 @@
+for i in $(seq -w 1 48); do
+  ogcli update port "port$i" <<EOF
+baudrate="115200"
+escape_char="]"
+EOF
+done
