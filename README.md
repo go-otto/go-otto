@@ -1,4 +1,4 @@
-👋 Hi, I’m @gogogadget 
+👋 Hi, I’m Jimmy
 🛠️ I build tools so humans can do less clicking and more thinking.  
 📚 Currently DevOps, but miss NetEng.  
 🤝 Let’s collaborate! Especially if your idea breaks before it scales.  
