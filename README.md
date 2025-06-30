@@ -1,8 +1,8 @@
-- 👋 Hi, I’m @go-otto
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+👋 Hi, I’m @gogogadget 
+🛠️ I build tools so humans can do less clicking and more thinking.  
+📚 Currently DevOps, but miss NetEng.  
+🤝 Let’s collaborate! Especially if your idea breaks before it scales.  
+📬 Best way to reach me? Open an issue. Second best? Try email.
 
 <!---
 go-otto/go-otto is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
