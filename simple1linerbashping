@@ -1,0 +1,24 @@
+for host in \
+  hydra-tfr-1-ilo.mvlab.nbulabs.nvidia.com \
+  sta-runner-ilo.mvlab.nbulabs.nvidia.com \
+  sta-monitoring-ilo.mvlab.nbulabs.nvidia.com \
+  tetra-stage-ilo.mvlab.nbulabs.nvidia.com \
+  tetrabuild-1-ilo.mvlab.nbulabs.nvidia.com \
+  tetra-arm-02-ilo.mvlab.nbulabs.nvidia.com \
+  pentabuild-2-ilo.mvlab.nbulabs.nvidia.com \
+  tetra-01-ilo.mvlab.nbulabs.nvidia.com \
+  hydra-user-18-ilo.mvlab.nbulabs.nvidia.com \
+  hydra-fab1-user1-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab1-user2-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab1-user7-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab3-user3-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab5-auto1-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab3-user1-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab3-user2-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab4-user1-ilo.lab2300.nbulabs.nvidia.com \
+  hydra-fab4-user2-ilo.lab2300.nbulabs.nvidia.com \
+  cl-netq-vrt-01-ilo.lab2300.nbulabs.nvidia.com \
+  penta-01-ilolab2300.nbulabs.nvidia.com \
+  hydra-frr-01-ilo.lab2300.nbulabs.nvidia.com; do
+    ping -c 1 -W 1 $host > /dev/null && echo "$host is reachable" || echo "$host is unreachable"
+done
